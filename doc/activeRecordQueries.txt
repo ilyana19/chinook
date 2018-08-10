@@ -18,3 +18,9 @@
 # => takes the first instance that matches
 
 10. Track.where(genre_id: Genre.where(name: 'Electronica/Dance')).where(media_type_id: MediaType.where(name: 'MPEG audio file'))
+
+# Find all the albums whose titles start with B.
+Album.where("title ILIKE ?", "B%")
+
+# Find all the artists whose names start with A.
+Artist.where("name ILIKE ?", "A%")
